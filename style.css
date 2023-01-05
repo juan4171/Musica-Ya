@@ -1,0 +1,221 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    background-color: #848484;
+}
+a{ 
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover{
+    color: black;
+}
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0 , 0.5);
+    box-shadow: 2px 2px 7px rgba(0, 0, 0 , 0.5);
+    color: white;
+    background-color: seagreen;
+}
+button:hover{
+    background-color: rgb(32, 91, 58);
+}
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+header{
+    color: white;
+    background-color: seagreen;
+}
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#logo{
+    margin: 0;
+    padding: 20px 30px;
+    font-weight: bold;
+    color: white;
+    font-size: 2.5em;
+    /* background-image: ; */ 
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+}
+header a{
+    padding: 5px 10px;
+    /* text-decoration: none;
+    font-weight: bold;
+    color: black;*/
+}
+/* header a:hover{
+    color: white;
+}  */
+#hero{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    background-image:linear-gradient(
+        0deg, 
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        ),url(imgs/MusicaYa.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#somos-MusicaYa{
+    text-align: center;
+    color:white;
+}
+#somos-MusicaYa .container{
+    padding: 15vh 10px;
+}
+
+#nuestros-cursos{
+    text-align: center;
+    background-color:seagreen;
+    color: white;
+}
+#nuestros-cursos .container{
+    padding: 15vh 0;
+}
+#nuestros-cursos h2{
+    margin-top: 0;
+    color: white;
+}
+#nuestros-cursos h3{
+    margin-top: 0;
+    color: white;
+}
+#nuestros-cursos p{
+    display: none;
+}
+
+#nuestros-cursos .carta{
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 50px 0;
+    margin: 25px 10px;
+    border-radius: 15px;
+}
+
+.carta:first-child{
+    background-image:linear-gradient(
+        0deg, 
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        ),url(imgs/les-paul-tocando.jpg);
+}
+.carta:nth-child(2){
+    background-image:linear-gradient(
+        0deg, 
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        ),url(imgs/les-paul-tocando.jpg);
+}
+.carta:nth-child(3){
+    background-image:linear-gradient(
+        0deg, 
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        ),url(imgs/les-paul-tocando.jpg);
+}
+
+#donde-encontrarnos .container{
+    text-align: center;
+    padding: 15vh 10px;
+    color: white;
+}
+
+#donde-encontrarnos .container li{
+    margin:15px 0px;
+    font-weight: bold;
+}
+#donde-encontrarnos .container iframe{
+    width: 100%;
+    height: 45vh;
+}
+
+footer{
+    padding: 2vh;
+    background-color: seagreen; 
+}
+footer .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+footer a{
+    text-align: center;
+}
+
+@media (min-width: 870px){
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+    }
+    #somos-MusicaYa .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #somos-MusicaYa .img-container{
+        background-image:url(imgs/somos.jpg);
+            background-size: cover;
+            background-position: center center;
+            height: 400px;
+            width: 50%;
+    }
+    #somos-MusicaYa .text-container{
+        width: 50%;
+        text-align: initial;
+        padding-left: 4%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #nuestros-cursos .cursos{
+        display: flex;
+        justify-content: center;
+    }
+    #nuestros-cursos p{
+        display: block;
+    }
+    #nuestros-cursos .carta{
+        padding: 50px 10px;
+        margin: 0 10px;
+    }
+    
+}
