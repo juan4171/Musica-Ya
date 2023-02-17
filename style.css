@@ -1,13 +1,46 @@
+/* configuraciones de generales */
 *{
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 html{
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
+    font-size: 62.5%; /* 1rem = 10px */
 }
 body{
-    margin: 0;
+    font-size: 1.6rem;
     background-color: #848484;
+}
+h1{
+    font-size: 3rem;
+    margin: 17px 0px 17px 0px;
+}
+h2{
+    font-size: 2.8rem;
+    margin: 17px 0px 17px 0px;
+}
+
+h3{
+    font-size: 2.2rem;
+    margin: 17px 0px 17px 0px;
+}
+p{
+    font-size: 1.7rem;
+}
+button{
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0 , 0.5);
+    box-shadow: 2px 2px 7px rgba(0, 0, 0 , 0.5);
+    color: white;
+    background-color: seagreen;
+}
+button:hover{
+    background-color: rgb(32, 91, 58);
 }
 a{ 
     color:white;
@@ -21,23 +54,12 @@ ul{
     list-style: none;
     padding-left: 0;
 }
-button{
-    font-size: 1.5em;
-    font-weight: bold;
-    padding: 15px 20px;
-    border-radius: 10px;
-    border: 2px solid rgba(0, 0, 0 , 0.5);
-    box-shadow: 2px 2px 7px rgba(0, 0, 0 , 0.5);
-    color: white;
-    background-color: seagreen;
-}
-button:hover{
-    background-color: rgb(32, 91, 58);
-}
-.container{
+
+.container{ /* el contenido de la pag despues de los 1400px sera margen */
     max-width: 1400px;
     margin: auto;
 }
+/* configuracion header */
 header{
     color: white;
     background-color: seagreen;
@@ -52,8 +74,8 @@ header .container{
     padding: 20px 30px;
     font-weight: bold;
     color: white;
-    font-size: 2.5em;
-    /* background-image: ; */ 
+    font-size: 2.9rem;
+    /* background-image: ; uso un texto como logo pero podria ser una img*/ 
 }
 header nav{
     display: flex;
@@ -63,20 +85,16 @@ header nav{
 }
 header a{
     padding: 5px 10px;
-    /* text-decoration: none;
-    font-weight: bold;
-    color: black;*/
 }
-/* header a:hover{
-    color: white;
-}  */
+/* configuracion section hero */
 #hero{
+    height: 100vh;/* TODO */
+    height: 100svh; /* 100vh contando la barra de navegacion mobile, si no toma 100vh */
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     color: white;
     background-image:linear-gradient(
         0deg, 
@@ -87,7 +105,7 @@ header a{
     background-size: cover;
     background-position: center center;
 }
-
+/* configuracion section musicaya */
 #somos-MusicaYa{
     text-align: center;
     color:white;
@@ -95,7 +113,7 @@ header a{
 #somos-MusicaYa .container{
     padding: 15vh 10px;
 }
-
+/* configuracion section nuestros-cursos */
 #nuestros-cursos{
     text-align: center;
     background-color:seagreen;
@@ -104,18 +122,9 @@ header a{
 #nuestros-cursos .container{
     padding: 15vh 0;
 }
-#nuestros-cursos h2{
-    margin-top: 0;
-    color: white;
-}
-#nuestros-cursos h3{
-    margin-top: 0;
-    color: white;
-}
 #nuestros-cursos p{
     display: none;
 }
-
 #nuestros-cursos .carta{
     align-items: center;
     background-repeat: no-repeat;
@@ -147,13 +156,12 @@ header a{
         rgba(0,0,0,0.5)
         ),url(imgs/les-paul-tocando.jpg);
 }
-
+/* configuraciones section donde-encontrarnos */
 #donde-encontrarnos .container{
     text-align: center;
     padding: 15vh 10px;
     color: white;
 }
-
 #donde-encontrarnos .container li{
     margin:15px 0px;
     font-weight: bold;
@@ -162,9 +170,8 @@ header a{
     width: 100%;
     height: 45vh;
 }
-
+/* configuracion footer */
 footer{
-    padding: 2vh;
     background-color: seagreen; 
 }
 footer .container{
@@ -172,6 +179,7 @@ footer .container{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 30px;
 }
 footer a{
     text-align: center;
@@ -211,11 +219,10 @@ footer a{
         justify-content: center;
     }
     #nuestros-cursos p{
-        display: block;
+        display: block;     /* y esto TODO */
     }
     #nuestros-cursos .carta{
         padding: 50px 10px;
         margin: 0 10px;
     }
-    
 }
