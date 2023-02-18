@@ -1,4 +1,5 @@
 /* configuraciones de generales */
+/* TODO anotaciones: color: white en html tag, hacer clase display=flex */
 *{
     box-sizing: border-box;
     padding: 0;
@@ -14,11 +15,10 @@ body{
     background-color: #848484;
 }
 h1{
-    font-size: 3rem;
-    margin: 17px 0px 17px 0px;
+    font-size: 2.9rem;
 }
 h2{
-    font-size: 2.8rem;
+    font-size: 2.7rem;
     margin: 17px 0px 17px 0px;
 }
 
@@ -53,16 +53,20 @@ a:hover{
 ul{
     list-style: none;
     padding-left: 0;
+    width: 100%;
 }
 
 .container{ /* el contenido de la pag despues de los 1400px sera margen */
     max-width: 1400px;
     margin: auto;
+    padding: 0px 10px;
 }
 /* configuracion header */
 header{
     color: white;
-    background-color: seagreen;
+    background-color: rgba(46, 139, 86, 0.655);
+    position: absolute;
+    width: 100%;
 }
 header .container{
     display: flex;
@@ -71,30 +75,30 @@ header .container{
 }
 #logo{
     margin: 0;
-    padding: 20px 30px;
+    padding: 10px;
     font-weight: bold;
     color: white;
-    font-size: 2.9rem;
+    font-size: 3.2rem;
     /* background-image: ; uso un texto como logo pero podria ser una img*/ 
 }
 header nav{
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-bottom: 20px;
 }
 header a{
     padding: 5px 10px;
 }
 /* configuracion section hero */
 #hero{
-    height: 100vh;/* TODO */
+    height: 100vh;
     height: 100svh; /* 100vh contando la barra de navegacion mobile, si no toma 100vh */
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 25px;
     color: white;
     background-image:linear-gradient(
         0deg, 
@@ -111,7 +115,11 @@ header a{
     color:white;
 }
 #somos-MusicaYa .container{
-    padding: 15vh 10px;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 /* configuracion section nuestros-cursos */
 #nuestros-cursos{
@@ -120,18 +128,17 @@ header a{
     color: white;
 }
 #nuestros-cursos .container{
-    padding: 15vh 0;
+    padding: 10px;
 }
 #nuestros-cursos p{
     display: none;
 }
 #nuestros-cursos .carta{
-    align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     padding: 50px 0;
-    margin: 25px 10px;
+    margin: 25px 0;
     border-radius: 15px;
 }
 
@@ -158,17 +165,20 @@ header a{
 }
 /* configuraciones section donde-encontrarnos */
 #donde-encontrarnos .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 15vh 10px;
     color: white;
 }
 #donde-encontrarnos .container li{
     margin:15px 0px;
     font-weight: bold;
 }
-#donde-encontrarnos .container iframe{
+iframe{
     width: 100%;
-    height: 45vh;
+    height: 50vh;
 }
 /* configuracion footer */
 footer{
@@ -179,13 +189,16 @@ footer .container{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 10px;
 }
 footer a{
     text-align: center;
 }
 
 @media (min-width: 870px){
+    header{
+        position: fixed;
+    }
     header .container{
         flex-direction: row;
         justify-content: space-between;
@@ -196,7 +209,8 @@ footer a{
     }
     #somos-MusicaYa .container{
         display: flex;
-        justify-content: space-evenly;
+        flex-direction: row;
+        gap: 10px;
     }
     #somos-MusicaYa .img-container{
         background-image:url(imgs/somos.jpg);
@@ -208,7 +222,6 @@ footer a{
     #somos-MusicaYa .text-container{
         width: 50%;
         text-align: initial;
-        padding-left: 4%;
         align-items: center;
         display: flex;
         flex-direction: column;
