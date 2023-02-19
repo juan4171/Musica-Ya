@@ -24,15 +24,15 @@ h2{
 
 h3{
     font-size: 2.2rem;
-    margin: 17px 0px 17px 0px;
+    margin: 15px 0px 15px 0px;
 }
 p{
-    font-size: 1.7rem;
+    font-size: 1.6rem;
 }
 button{
     font-size: 2.2rem;
     font-weight: bold;
-    padding: 15px 20px;
+    padding: 15px 25px;
     border-radius: 10px;
     border: 2px solid rgba(0, 0, 0 , 0.5);
     box-shadow: 2px 2px 7px rgba(0, 0, 0 , 0.5);
@@ -59,12 +59,12 @@ ul{
 .container{ /* el contenido de la pag despues de los 1400px sera margen */
     max-width: 1400px;
     margin: auto;
-    padding: 0px 10px;
+    padding: 0 10px;
 }
 /* configuracion header */
 header{
     color: white;
-    background-color: rgba(46, 139, 86, 0.655);
+    background-color: rgba(46, 139, 86, 0.7);
     position: absolute;
     width: 100%;
 }
@@ -75,7 +75,7 @@ header .container{
 }
 #logo{
     margin: 0;
-    padding: 10px;
+    padding: 0.7rem;
     font-weight: bold;
     color: white;
     font-size: 3.2rem;
@@ -130,38 +130,37 @@ header a{
 #nuestros-cursos .container{
     padding: 10px;
 }
-#nuestros-cursos p{
-    display: none;
+.cursos{
+    display: grid;
+    /* grid-template-rows: repeat(3, 1fr); */
+    gap: 12.5px;
 }
-#nuestros-cursos .carta{
+.carta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    /* background-image:linear-gradient(
+        0deg, 
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        ),url(imgs/les-paul-tocando.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
-    padding: 50px 0;
-    margin: 25px 0;
-    border-radius: 15px;
+    background-position: center center; */
+    gap: 10px;
+    padding: 10px;
+    border-radius: 30px;
 }
-
-.carta:first-child{
-    background-image:linear-gradient(
-        0deg, 
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-        ),url(imgs/les-paul-tocando.jpg);
+.carta p{
+    display: none;
 }
-.carta:nth-child(2){
-    background-image:linear-gradient(
-        0deg, 
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-        ),url(imgs/les-paul-tocando.jpg);
+.carta img{
+    width: 80%;
 }
-.carta:nth-child(3){
-    background-image:linear-gradient(
-        0deg, 
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-        ),url(imgs/les-paul-tocando.jpg);
+.carta button{
+    padding: 2px 25px;
+    border-style: none;
 }
 /* configuraciones section donde-encontrarnos */
 #donde-encontrarnos .container{
@@ -211,6 +210,7 @@ footer a{
         display: flex;
         flex-direction: row;
         gap: 10px;
+        padding: 4.6rem 10px; /* TODO */
     }
     #somos-MusicaYa .img-container{
         background-image:url(imgs/somos.jpg);
@@ -227,15 +227,17 @@ footer a{
         flex-direction: column;
         justify-content: center;
     }
-    #nuestros-cursos .cursos{
-        display: flex;
-        justify-content: center;
+    #nuestros-cursos .container{
+        padding: 4.6rem 10px; /* TODO */
     }
-    #nuestros-cursos p{
-        display: block;     /* y esto TODO */
+    .cursos{
+        grid-template-rows: auto;
+        grid-template-columns: repeat(3, 1fr);
     }
-    #nuestros-cursos .carta{
-        padding: 50px 10px;
-        margin: 0 10px;
+    .carta{
+        height: min-content;    /* hace que la carta use solo el espacio que necesita en el grid */
+    }
+    .carta p{
+        display: block;
     }
 }
